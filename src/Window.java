@@ -2,24 +2,18 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 public class Window extends JFrame {
-
     JButton[] numButtons = new JButton[10];
     JButton[] functionButtons = new JButton[8];
-
     JTextField textField = new JTextField();
     float num1;
     float num2;
     char operator;
     public Window () {
 
-
-
         setBounds(400,300,600,500);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(null);
-
 
         textField.setBounds(40,25,500,50);
         add(textField);
@@ -72,11 +66,8 @@ public class Window extends JFrame {
         for (int i = 0; i < functionButtons.length; i++) {
             functionButtons[i].addActionListener(this::actionPerformed);
         }
-
         setVisible(true);
     }
-
-
     public void actionPerformed(ActionEvent e) {
 
         for (int i = 0; i < 10; i++) {
@@ -135,7 +126,6 @@ public class Window extends JFrame {
             }
         }
 
-
         if (e.getSource() == functionButtons[6]) {
             textField.setText("0");
         }
@@ -192,6 +182,4 @@ public class Window extends JFrame {
         }
 
     }
-
-
 }
